@@ -24,6 +24,7 @@ header .header-content .profile-picture {
   border-radius: 50%;
   overflow: hidden;
   margin-right: 20px;
+  border: 5px solid rgba(0, 123, 255, 0.6);
 }
 header .header-content .profile-picture img {
   width: 100%;
