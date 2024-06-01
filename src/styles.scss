@@ -195,6 +195,23 @@ section {
     margin-bottom: 4rem;
 }
 
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        margin-bottom: 5px;
+        font-size: 0.95rem;
+        list-style: none;
+
+        .social-link {
+            text-decoration: none;
+            color: $accent-color;
+        }
+    }
+}
+
 @media print {
 
     html,

@@ -157,6 +157,20 @@ section div p {
   margin-bottom: 4rem;
 }
 
+.social-links {
+  list-style-type: none;
+  padding: 0;
+}
+.social-links li {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+  list-style: none;
+}
+.social-links li .social-link {
+  text-decoration: none;
+  color: #007bff;
+}
+
 @media print {
   html,
   body {
