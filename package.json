@@ -1,0 +1,23 @@
+{
+  "name": "my-cv",
+  "version": "1.0.0",
+  "description": "just my cv in html - export to pdf",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krzyvcio/my-CV.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krzyvcio/my-CV/issues"
+  },
+  "homepage": "https://github.com/krzyvcio/my-CV#readme",
+  "dependencies": {
+    "puppeteer": "^22.10.0"
+  }
+}
