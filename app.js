@@ -7,7 +7,7 @@ const path = require('path');
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    // Ustawianie rozmiaru strony na A4
+    // Set the page size to A4
     await page.setViewport({
         width: 595,
         height: 842,
@@ -21,14 +21,20 @@ const path = require('path');
         process.exit(1);
     }
 
-    // Przerób stronę na plik PDF
+    // Process the page into a PDF
     const pdf = await page.pdf({
         format: 'A4',
         printBackground: true,
     });
 
-    // Zapisz plik PDF
-    require('fs').writeFileSync('MichalRusin_CV_2024_May.pdf', pdf);
+    try {
+        // Save the PDF file
+        require('fs').writeFileSync('MichalRusin_CV_2024_May.pdf', pdf);
+        console.log('CV PDF file saved successfully.');
+    } catch (error) {
+        console.error('Error saving PDF file:', error);
+        process.exit(1);
+    }
 
     await browser.close();
 })();

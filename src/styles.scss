@@ -3,6 +3,9 @@ $primary-color: #333;
 $secondary-color: #666;
 $accent-color: #007bff;
 $font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import url("src/assets/twemoji/twemoji-72x72.css");
 
 // Global Styles
 body {
@@ -12,6 +15,15 @@ body {
     color: $primary-color;
     margin: 0;
     padding: 0;
+}
+
+.emoji {
+    display: inline-block;
+    font-size: 1em;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    top: 2px;
 }
 
 // Header Styles
@@ -60,6 +72,15 @@ header {
                 }
             }
         }
+
+        .contact-info {
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+
     }
 }
 
@@ -75,9 +96,10 @@ section {
     ul {
         list-style-type: none;
         padding: 0;
+        margin-left: 2rem;
 
         li {
-            margin-bottom: 5px;
+            margin-bottom: 12px;
 
             &:before {
                 content: "•";
@@ -146,4 +168,42 @@ section {
 .main-content {
     padding: 20px;
     flex: 1; // Zajmuje pozostałą część szerokości
+}
+
+.company {
+    color: $accent-color;
+    font-weight: 600;
+}
+
+.date {
+    color: $secondary-color;
+}
+
+.consent {
+    h3 {
+        color: $secondary-color;
+
+    }
+
+    p {
+        color: $secondary-color;
+        font-size: 0.9rem;
+    }
+}
+
+.experience-item {
+    margin-bottom: 4rem;
+}
+
+@media print {
+
+    html,
+    body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+    }
+
+
 }
